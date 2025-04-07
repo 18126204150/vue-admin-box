@@ -49,8 +49,8 @@ const actions = {
     return new Promise((resolve, reject) => {
       getInfoApi(params)
       .then(res => {
-        commit('infoChange', res.data.info)
-        resolve(res.data.info)
+        commit('infoChange', res.data.users)
+        resolve(res.data.users)
       })
     })
   },

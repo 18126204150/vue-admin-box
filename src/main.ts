@@ -4,6 +4,7 @@
  */
 import { createApp } from 'vue'
 import ElementPlus from 'element-plus'
+import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import { baidu } from './utils/system/statistics'
 import 'element-plus/theme-chalk/display.css' // 引入基于断点的隐藏类
 import 'element-plus/dist/index.css'
@@ -26,6 +27,9 @@ getAuthRoutes().then(() => {
   app.use(store)
   app.use(router)
   app.use(i18n)
+  for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
+    app.component(key, component)
+  }
   // app.config.performance = true
   app.mount('#app')
 })

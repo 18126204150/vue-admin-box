@@ -73,8 +73,8 @@ export default defineComponent({
     const router = useRouter()
     const route = useRoute()
     const form = reactive({
-      name: 'admin',
-      password: '123456',
+      name: 'superYDT',
+      password: 'Datadb@123',
       loading: false
     })
     const passwordType = ref('password')

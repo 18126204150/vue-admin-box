@@ -11,10 +11,10 @@
       <!-- 快捷功能按钮 -->
       <div class="function-list">
         <div class="function-list-item hidden-sm-and-down"><Full-screen /></div>
-        <div class="function-list-item"><Word /></div>
+        <!-- <div class="function-list-item"><Word /></div> -->
         <div class="function-list-item"><SizeChange /></div>
         <div class="function-list-item hidden-sm-and-down"><Theme /></div>
-        <div class="function-list-item hidden-sm-and-down"><Github /></div>
+        <!-- <div class="function-list-item hidden-sm-and-down"><Github /></div> -->
       </div>
       <!-- 用户信息 -->
       <div class="user-info">
@@ -25,7 +25,7 @@
           </span>
           <template #dropdown>
             <el-dropdown-menu>
-              <el-dropdown-item @click="showPasswordLayer">{{ $t('message.system.changePassword') }}</el-dropdown-item>
+              <!-- <el-dropdown-item @click="showPasswordLayer">{{ $t('message.system.changePassword') }}</el-dropdown-item> -->
               <el-dropdown-item @click="loginOut">{{ $t('message.system.loginOut') }}</el-dropdown-item>
             </el-dropdown-menu>
           </template>
@@ -41,9 +41,9 @@ import { defineComponent, computed, reactive } from 'vue'
 import { useStore } from 'vuex'
 import { useRouter, useRoute } from 'vue-router'
 import FullScreen from './functionList/fullscreen.vue'
-import Word from './functionList/word.vue'
+// import Word from './functionList/word.vue'
 import SizeChange from './functionList/sizeChange.vue'
-import Github from './functionList/github.vue'
+// import Github from './functionList/github.vue'
 import Theme from './functionList/theme.vue'
 import Breadcrumb from './Breadcrumb.vue'
 import PasswordLayer from './passwordLayer.vue'
@@ -51,9 +51,9 @@ export default defineComponent({
   components: {
     FullScreen,
     Breadcrumb,
-    Word,
+    // Word,
     SizeChange,
-    Github,
+    // Github,
     Theme,
     PasswordLayer
   },
